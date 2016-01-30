@@ -1,28 +1,58 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Описани API для приложения GoMatch
 
-Things you may want to cover:
+* Регистрация
 
-* Ruby version
+    Метод POST
 
-* System dependencies
+        Url: http://128.199.41.28:3003/registration
 
-* Configuration
+        Параметры:
 
-* Database creation
+            user[login]
+            user[email]
+            user[nikName]
+            user[password]
+            user[avatar] < Image
 
-* Database initialization
+        Пример ответа:
 
-* How to run the test suite
+            {
+                "id":3,
+                "login":"login",
+                "email":"email",
+                "nikName":"nikName",
+                "password":"password",
+                "created_at":"2016-01-30T11:23:29.309Z",
+                "updated_at":"2016-01-30T11:23:29.309Z",
+                "status":true
+            }
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Авторизация
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+    Метод Get
+
+        Url: http://128.199.41.28:3003/auth
+
+        Параметры:
+
+            user[email]
+            user[password]
+
+        Пример ответа:
+
+            {
+                "id":3,
+                "login":"login",
+                "email":"email",
+                "nikName":"nikName",
+                "password":"password",
+                "created_at":"2016-01-30T11:23:29.309Z",
+                "updated_at":"2016-01-30T11:23:29.309Z",
+                "status":true
+            }
+
+<tt></tt>.
